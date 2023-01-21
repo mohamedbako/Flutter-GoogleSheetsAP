@@ -23,16 +23,11 @@ class _UserFormWidgetState extends State<UserFormWidget> {
   late TextEditingController controllerEmail;
   late bool experience;
   late TextEditingController controllerMsg;
-  final fieldText = TextEditingController();
 
   @override
   void initState() {
     super.initState();
     initUser();
-  }
-
-  void clearText() {
-    fieldText.clear();
   }
 
   void initUser() {

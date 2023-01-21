@@ -17,7 +17,8 @@ class CreateSheetsPage extends StatelessWidget {
             padding: EdgeInsets.all(32),
             child: SingleChildScrollView(
               child: UserFormWidget(onSavedUser: (user) async {
-                final id = await UserSheetApi.getRowCount() + 1;
+                final id = await UserSheetApi.getRowCount() +
+                    1; // Add 1 in ID when we have new data
                 final newUser = user.copy(id: id);
                 await UserSheetApi.insert([newUser.toJson()]);
               }),
